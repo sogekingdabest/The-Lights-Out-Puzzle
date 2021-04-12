@@ -1,9 +1,6 @@
 package com.udc.es.rcra;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 
 /*
@@ -56,8 +53,33 @@ public class LightsOut {
         return lineasArchivo;
     }
 
+    public static void crearArchivoBD(ArrayList<String> lineasArchivo, PrintWriter writer) {
+        String[] linea;
+        int j = 0;
+        writer.println("#const n= "+lineasArchivo.get(0)+".");
+        for(int i = 1; i < lineasArchivo.size(); i++) {
+            linea = lineasArchivo.get(i).split("");
+            while(j < Integer.parseInt(lineasArchivo.get(0))){
+                writer.println("h(cell("+(i-1)+","+j+"), "+((linea[j].equals("1"))? "ON" : "OFF")+").");
+                j++;
+            }
+            j=0;
+        }
+    }
 
     public static void main(String[] args) {
 	// write your code here
+        try {
+            ArrayList<String> lineasArchivo;
+            PrintWriter writer = new PrintWriter(args[0].split("\\.")[0]+".lp", "UTF-8");
+            lineasArchivo = lecturaLineasArchivo(args);
+            crearArchivoBD(lineasArchivo, writer);
+
+            writer.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 }
