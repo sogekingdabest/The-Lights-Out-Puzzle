@@ -36,12 +36,7 @@ c(F)   :- 'h(F,V), h(F,W), V!=W.
 
 :- o(tog(X,Y)), o(tog(X1,Y1)), (X,Y)!=(X1,Y1), _adyacente(X1,Y1,X,Y).
 
-toggled(X,Y) :- o(tog(X,Y)).
-toggled(X,Y) :- 'toggled(X,Y).
-:- o(tog(X,Y)), 'toggled(X,Y).
-
 #program final.
 :- h(cell(_,_),on).
-%#minimize { 1,X,Y : toggled(X,Y) }.
 
 #show o/1.
