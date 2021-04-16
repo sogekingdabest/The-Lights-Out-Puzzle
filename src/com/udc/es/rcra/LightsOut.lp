@@ -3,6 +3,9 @@
 % Esta implmentación del puzzle LightsOut solo nos permitiría clickar en una casilla a la vez por estado.
 %%% %%%
 
+#program initial.
+action(tog(X,Y)) :- cell(X,Y).
+
 #program dynamic.
 1 { o(A) : _action(A) } 1.
 
