@@ -3,7 +3,7 @@ Documento elaborado en conxunto por:
     · Daniel Olañeta Fariña
     · Ángel Álvarez Rey
 
-
+**Enlace al proyecto de GitHub: https://github.com/sogekingdabest/The-Lights-Out-Puzzle** 
 
 Esta práctica foi elaborada en java (versión 11.0.9).
 
