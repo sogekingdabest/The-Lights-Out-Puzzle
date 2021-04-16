@@ -1,3 +1,9 @@
+%%% LightsOutParallelTogAdya %%%
+%% Descripcion %%
+% Esta implmentacion del puzzle LightOut nos permite clicar en mas de una casilla a la vez
+% aunque estas sean adyacentes.
+%%% %%%
+
 #program initial.
 action(tog(X,Y)) :- cell(X,Y).
 
