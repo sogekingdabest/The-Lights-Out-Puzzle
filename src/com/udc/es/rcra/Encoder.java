@@ -3,13 +3,8 @@ package com.udc.es.rcra;
 import java.io.*;
 import java.util.ArrayList;
 
-/*
-* Si queréis usar la misma representación que los ejemplos de clase (switches, misioneros y caníbales)
-* tenéis que pensar en un fluente y en sus valores. Por ejemplo h(cell(X,Y),on) indica que el fluente
-* cell(X,Y) está on. Y lo mismo para h(cell(X,Y),off). Así, los axiomas de inercia que os he dado os
-* funcionan directamente.
-* */
-public class LightsOut {
+
+public class Encoder {
 
     private static ArrayList<String> lecturaLineasArchivo(String [] args) {
         File archivo;
@@ -56,11 +51,13 @@ public class LightsOut {
     public static void crearArchivoBD(ArrayList<String> lineasArchivo, PrintWriter writer) {
         String[] linea;
         int j = 0;
-        writer.println("#const n= "+lineasArchivo.get(0)+".");
+        int n = Integer.parseInt(lineasArchivo.get(0));
+        writer.println("#const n= "+n+".");
+        writer.println("cell(0.."+(n-1)+",0.."+(n-1)+").");
         for(int i = 1; i < lineasArchivo.size(); i++) {
             linea = lineasArchivo.get(i).split("");
             while(j < Integer.parseInt(lineasArchivo.get(0))){
-                writer.println("h(cell("+(i-1)+","+j+"), "+((linea[j].equals("1"))? "ON" : "OFF")+").");
+                writer.println("h(cell("+(i-1)+","+j+"), "+((linea[j].equals("1"))? "on" : "off")+").");
                 j++;
             }
             j=0;
@@ -68,7 +65,6 @@ public class LightsOut {
     }
 
     public static void main(String[] args) {
-	// write your code here
         try {
             ArrayList<String> lineasArchivo;
             PrintWriter writer = new PrintWriter(args[0].split("\\.")[0]+".lp", "UTF-8");
