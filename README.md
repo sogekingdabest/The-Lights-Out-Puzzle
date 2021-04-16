@@ -4,8 +4,6 @@ python showlights.py ~/Descargas/Q2/RCRA/LightsOut/ex/ex05_02.txt solProba.txt
 telingo LightsOutParalell.lp ~/Descargas/Q2/RCRA/LightsOut/ex/ex05_02.lp
 
 
-
-
 Documento elaborado en conxunto por:
 
     · Daniel Olañeta Fariña
