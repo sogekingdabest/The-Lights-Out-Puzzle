@@ -1,7 +1,7 @@
-%%% LightsOutParallel %%%
-%% Descripcion %%
-% Esta implmentacion del puzzle LightOut nos permite clickar en mas de una casilla a la vez
-% teniendo en cuenta sus adyacentes para no influir en los demas clicks.
+%%% LightsOutParallelMinimize %%%
+%% Descripción %%
+% Esta implmentación del puzzle LightsOut nos permite clickar en más de una casilla a la vez
+% teniendo en cuenta sus adyacentes para no influír en los demás clicks y buscando el mínimo de toggles.
 %%% %%%
 
 #program initial.

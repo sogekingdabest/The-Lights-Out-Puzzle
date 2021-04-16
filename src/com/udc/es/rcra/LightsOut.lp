@@ -1,6 +1,6 @@
 %%% LightsOut %%%
-%% Descripcion %%
-% Esta implmentacion del puzzle LightOut solo nos permitiria clicar en una casilla a la vez por state.
+%% Descripción %%
+% Esta implmentación del puzzle LightsOut solo nos permitiría clickar en una casilla a la vez por estado.
 %%% %%%
 
 #program dynamic.

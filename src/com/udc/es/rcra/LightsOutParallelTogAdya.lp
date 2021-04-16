@@ -1,6 +1,6 @@
 %%% LightsOutParallelTogAdya %%%
-%% Descripcion %%
-% Esta implmentacion del puzzle LightOut nos permite clicar en mas de una casilla a la vez
+%% Descripción %%
+% Esta implmentación del puzzle LightsOut nos permite clickar en más de una casilla a la vez
 % aunque estas sean adyacentes.
 %%% %%%
 
